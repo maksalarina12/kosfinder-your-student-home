@@ -21,23 +21,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
-          cache: 'npm'
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Build Project
-        run: npm run build
+        run: bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Lovable/TanStack biasanya mengeluarkan hasil di folder .output atau dist
-          # Jika gagal, cek apakah foldersnya 'dist' atau '.output'
+          # Sesuaikan folder output, biasanya 'dist' atau '.output' untuk TanStack
           path: './dist' 
 
   deploy:

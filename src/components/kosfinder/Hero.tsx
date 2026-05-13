@@ -27,7 +27,7 @@ export function Hero() {
           </div>
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             Temukan Kos Mahasiswa
-            <span className="block bg-gradient-to-r from-white via-white to-trust bg-clip-text text-transparent">
+            <span className="mt-2 block text-trust drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
               Aman, Transparan & Bebas Penipuan
             </span>
           </h1>

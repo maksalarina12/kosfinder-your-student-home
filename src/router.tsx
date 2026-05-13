@@ -7,10 +7,10 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
-    basepath: import.meta.env.BASE_URL,
+    // Mengunci basepath agar sesuai dengan repo GitHub
+    basepath: "/kosfinder-your-student-home/", 
     context: { queryClient },
     scrollRestoration: true,
-    defaultPreloadStaleTime: 0,
   });
 
   return router;

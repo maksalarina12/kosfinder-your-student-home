@@ -20,21 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
-      - name: Install dependencies
+      - name: Install
         run: bun install
-
-      - name: Build Project
+      - name: Build
         run: bun run build
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

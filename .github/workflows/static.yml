@@ -28,16 +28,15 @@ jobs:
 
       - name: Install dependencies
         run: bun install
-
+      
       - name: Build Project
         run: bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Sesuaikan folder output, biasanya 'dist' atau '.output' untuk TanStack
-          path: './dist' 
-
+          # TanStack Start biasanya mengeluarkan hasil statis di sini
+          path: './.output/public'
   deploy:
     environment:
       name: github-pages
